@@ -12,8 +12,8 @@ const Home: FC = () => {
         <Link className="text-3xl font-bold underline" href={'/rating'}>
           Rating Component
         </Link>
-        <Link href={'/component2'}>Component 2</Link>
-        <Link href={'/component3'}>Component 3</Link>
+        <Link href={'/tip-calculator'}>Tip calculator</Link>
+        <Link href={'/advice-generator'}>Advice generator</Link>
       </main>
     </div>
   );

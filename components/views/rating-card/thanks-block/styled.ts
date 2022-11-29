@@ -25,6 +25,7 @@ export const RateInfo = styled.div`
 export const Title = styled.h2`
   margin-top: 40px;
   color: ${Colors.WHITE};
+  font-size: 32px;
 `;
 
 export const Description = styled.div`
