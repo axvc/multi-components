@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Colors } from 'constants/advice-generator/Colors';
+import { Widths } from 'constants/advice-generator/Widths';
 
 export const Container = styled.div`
   position: relative;
@@ -11,6 +12,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: ${Widths.DESKTOP}) {
+    width: 90%;
+  }
 `;
 
 export const Title = styled.span`
