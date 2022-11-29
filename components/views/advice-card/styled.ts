@@ -12,6 +12,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fade-in 0.1s linear;
 
   @media (max-width: ${Widths.DESKTOP}) {
     width: 90%;
@@ -24,6 +25,7 @@ export const Title = styled.span`
   text-transform: uppercase;
   color: ${Colors.NEON_GREEN};
   font-size: 14px;
+  animation: fade-in 0.1s linear;
 `;
 
 export const Advice = styled.span`
@@ -31,6 +33,7 @@ export const Advice = styled.span`
   font-size: 28px;
   text-align: center;
   color: ${Colors.LIGHT_CYAN};
+  animation: fade-in 0.1s linear;
 `;
 
 export const DividerWrapper = styled.div`

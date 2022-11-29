@@ -1,14 +1,17 @@
 import styles from 'styles/Home.module.css';
 import { FC } from 'react';
-import { useRouter } from 'next/router';
 import MainHead from 'components/main-head';
+import SplitterLogo from 'assets/tip-calculator/images/logo.svg';
+import TipCard from 'components/views/tip-card';
 
 const TipCalculator: FC = () => {
-  const router = useRouter();
   return (
-    <div className={styles.rating}>
+    <div className={styles.tipCalculator}>
       <MainHead />
-      <h1>Tip calculator</h1>
+      <div className={styles.tipLogoWrapper}>
+        <SplitterLogo />
+      </div>
+      <TipCard />
     </div>
   );
 };
