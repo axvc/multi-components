@@ -11,7 +11,7 @@ interface Props {
 }
 
 const RateBlock: FC<Props> = ({ selectedRate, handleSelect, handleSubmit }) => (
-  <>
+  <ST.Container>
     <ST.LogoWrapper>
       <StarLogo />
     </ST.LogoWrapper>
@@ -22,7 +22,7 @@ const RateBlock: FC<Props> = ({ selectedRate, handleSelect, handleSubmit }) => (
     </ST.Description>
     <Rate selectedRate={selectedRate} handleSelect={handleSelect} />
     <ST.Button onClick={() => handleSubmit()}>Submit</ST.Button>
-  </>
+  </ST.Container>
 );
 
 export default RateBlock;

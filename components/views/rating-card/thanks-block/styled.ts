@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
+  animation: fade-in 0.2s linear;
 `;
 
 export const ThanksLogoWrapper = styled.div`

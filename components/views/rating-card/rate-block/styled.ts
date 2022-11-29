@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { Colors } from 'constants/rating/Colors';
 
+export const Container = styled.div`
+  animation: fade-in 0.2s linear;
+`;
+
 export const LogoWrapper = styled.div`
   width: 48px;
   height: 48px;
