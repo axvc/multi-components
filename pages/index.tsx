@@ -9,7 +9,9 @@ const Home: FC = () => {
       <MainHead />
 
       <main className={styles.main}>
-        <Link href={'/rating'}>Rating Component</Link>
+        <Link className="text-3xl font-bold underline" href={'/rating'}>
+          Rating Component
+        </Link>
         <Link href={'/component2'}>Component 2</Link>
         <Link href={'/component3'}>Component 3</Link>
       </main>
