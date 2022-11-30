@@ -7,7 +7,12 @@ import TipCard from 'components/views/tip-card';
 const TipCalculator: FC = () => {
   return (
     <div className={styles.tipCalculator}>
-      <MainHead />
+      <MainHead
+        title={'Tip Calculator'}
+        description={
+          'Application for calculating tips and order amount for the number of people'
+        }
+      />
       <div className={styles.tipLogoWrapper}>
         <SplitterLogo />
       </div>

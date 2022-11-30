@@ -11,11 +11,15 @@ import GithubIcon from 'assets/main/icons/github.svg';
 
 const Home: FC = () => {
   return (
-    <div className="main-bg w-screen h-screen overflow-hidden">
-      <MainHead />
-      {/*<div className="main-header h-28"></div>*/}
-      <header className="flex justify-center items-center flex-col text-4xl h-200px mt-10">
-        <h1 className="text-3xl font-extrabold">MULTI COMPONENTS</h1>
+    <div className="main-bg w-screen h-screen">
+      <MainHead
+        title={'Multi Components'}
+        description={
+          'Collection of three applications with different functionality and technologies'
+        }
+      />
+      <header className="flex justify-center items-center flex-col text-4xl h-200px">
+        <h1 className="text-3xl font-extrabold mt-10">MULTI COMPONENTS</h1>
         <div className="flex gap-10 mt-6">
           <a href="https://axvc.notion.site/ARTEM-ZVEREV-952879108e0c485d93e9740ffc5f588e">
             <div className="site-button flex justify-center items-center px-1.5 py-2 leading-3 font-semibold text-sm rounded-xl">
@@ -37,12 +41,12 @@ const Home: FC = () => {
           </a>
         </div>
       </header>
-      <div className="flex flex-col items-center p-24">
-        <div className="w-full flex justify-around mt-10 gap-10 z-10">
-          <div className="w-1/3 flex flex-col gap-5">
+      <div className="flex flex-col items-center p-24 outer-apps-block">
+        <div className="w-full flex justify-around mt-10 gap-10 z-10 inner-apps-block">
+          <div className="w-1/3 flex flex-col gap-5 app-block">
             <h2 className="text-2xl font-bold">Rating Window</h2>
             <Link href={'/rating'}>
-              <div className="bg-ratingBg rounded-md h-72">
+              <div className="bg-ratingBg rounded-md h-72 app-card">
                 <div className="bg-ratingBg flex justify-center items-center h-52 rounded-t-lg overflow-hidden">
                   <Image
                     src={RatingImage}
@@ -64,10 +68,10 @@ const Home: FC = () => {
               </div>
             </Link>
           </div>
-          <div className="w-1/3 flex flex-col gap-5">
+          <div className="w-1/3 flex flex-col gap-5 app-block">
             <h2 className="text-2xl font-bold">Tip Calculator</h2>
             <Link href={'/tip-calculator'}>
-              <div className="bg-tipBg rounded-md h-72">
+              <div className="bg-tipBg rounded-md h-72 app-card">
                 <div className="bg-tipBg flex justify-center items-center h-52 rounded-t-lg overflow-hidden">
                   <Image
                     src={TipImage}
@@ -92,10 +96,10 @@ const Home: FC = () => {
               </div>
             </Link>
           </div>
-          <div className="w-1/3 flex flex-col gap-5">
+          <div className="w-1/3 flex flex-col gap-5 app-block">
             <h2 className="text-2xl font-bold">Advice Generator</h2>
             <Link href={'/advice-generator'}>
-              <div className="bg-adviceBg rounded-md h-72">
+              <div className="bg-adviceBg rounded-md h-72 app-card">
                 <div className="bg-adviceBg flex justify-center items-center h-52 rounded-t-lg overflow-hidden">
                   <Image
                     src={AdviceImage}

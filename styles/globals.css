@@ -4,7 +4,6 @@
 
 html,
 body {
-  overflow: hidden;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -33,19 +32,6 @@ input[type=number] {
 .main-bg {
   background-color: hsl(222, 47%, 11%);
   font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-.main-header {
-  background: conic-gradient(from 182.43deg at 50% 50%, hsl(331, 99%, 74%) 0deg, hsl(281, 100%, 50%) 150deg, hsl(212, 100%, 57%) 360deg);
-  opacity: 0.92;
-  filter: blur(60px);
-  transform: rotate(-16.02deg);
-  height: 200px;
-  position: absolute;
-  top: 40%;
-  left: 0;
-  right: 0;
-  animation: gradient-moves 40s infinite;
 }
 
 .site-button {
@@ -77,6 +63,31 @@ input[type=number] {
   body {
     color: white;
     background: black;
+  }
+}
+
+@media (max-width: 1440px) {
+
+  .outer-apps-block {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .inner-apps-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-block {
+    width: 90%;
+  }
+
+  .app-card {
+    height: auto;
+  }
+
+  .main-bg {
+    height: 100%;
   }
 }
 

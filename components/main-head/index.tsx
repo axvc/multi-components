@@ -1,10 +1,15 @@
 import Head from 'next/head';
 import { FC } from 'react';
 
-const MainHead: FC = () => (
+interface Props {
+  title: string;
+  description: string;
+}
+
+const MainHead: FC<Props> = ({ title, description }) => (
   <Head>
-    <title>Multi components</title>
-    <meta name="description" content="Three ui components" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <link rel="icon" href="/favicon.ico" />
   </Head>
 );

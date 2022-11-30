@@ -13,7 +13,10 @@ interface Props {
 const AdviceGenerator: NextPage<Props> = ({ advice }) => {
   return (
     <div className={styles.adviceGenerator}>
-      <MainHead />
+      <MainHead
+        title={'Advice Generator'}
+        description={'Application for generating random tips for the day'}
+      />
       <AdviceCard initialAdvice={advice} />
     </div>
   );
