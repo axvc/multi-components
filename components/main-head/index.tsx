@@ -15,6 +15,7 @@ const MainHead: FC<Props> = ({ title, description }) => (
     <meta property="og:image:secure_url" content="https://ibb.co/qF3xs2z" />
     <meta property="og:image:width" content="1920" />
     <meta property="og:image:height" content="1080" />
+    <meta property="og:image:alt" content="Screenshot" />
     <meta property="og:title" content={title} />
     <link rel="icon" href="/favicon.ico" />
   </Head>
