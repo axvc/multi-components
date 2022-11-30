@@ -35,21 +35,33 @@ input[type=number] {
 }
 
 .site-button {
-  background: #F6F3FF;
-  border: 0.5px solid #7C3AED;
-  color: #7C3AED;
+  background: hsl(255, 100%, 98%);
+  border: 1px solid hsl(262, 83%, 58%);
+  color: hsl(262, 83%, 58%);
+}
+
+.site-button svg {
+  transform: translateY(1px);
 }
 
 .linked-in-button {
-  background: #F1F8FF;
-  border: 0.5px solid #0A66C2;
-  color: #0A66C2;
+  background: hsl(210, 100%, 97%);
+  border: 1px solid hsl(210, 90%, 40%);
+  color: hsl(210, 90%, 40%);
+}
+
+.linked-in-button svg {
+  transform: translateY(1px);
 }
 
 .github-button {
-  background: #F2F2F2;
-  border: 0.5px solid #222222;
-  color: #222222;
+  background: hsl(0, 0%, 95%);
+  border: 1px solid hsl(0, 0%, 13%);
+  color: hsl(0, 0%, 13%);
+}
+
+.github-button svg {
+  transform: translateY(1px);
 }
 
 .scale-300 {

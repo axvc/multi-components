@@ -10,6 +10,7 @@ const MainHead: FC<Props> = ({ title, description }) => (
   <Head>
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://multicomponents.vercel.app/" />
     <meta property="og:image" content="https://ibb.co/qF3xs2z" />
