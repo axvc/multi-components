@@ -4,6 +4,7 @@
 
 html,
 body {
+  overflow: hidden;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -29,6 +30,46 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.main-bg {
+  background-color: hsl(222, 47%, 11%);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.main-header {
+  background: conic-gradient(from 182.43deg at 50% 50%, hsl(331, 99%, 74%) 0deg, hsl(281, 100%, 50%) 150deg, hsl(212, 100%, 57%) 360deg);
+  opacity: 0.92;
+  filter: blur(60px);
+  transform: rotate(-16.02deg);
+  height: 200px;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  animation: gradient-moves 40s infinite;
+}
+
+.site-button {
+  background: #F6F3FF;
+  border: 0.5px solid #7C3AED;
+  color: #7C3AED;
+}
+
+.linked-in-button {
+  background: #F1F8FF;
+  border: 0.5px solid #0A66C2;
+  color: #0A66C2;
+}
+
+.github-button {
+  background: #F2F2F2;
+  border: 0.5px solid #222222;
+  color: #222222;
+}
+
+.scale-300 {
+  transform: scale(3);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -45,5 +86,17 @@ input[type=number] {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes gradient-moves {
+  0% {
+    transform: rotate(-16.02deg);
+  }
+  50% {
+    transform: rotate(-36.02deg);
+  }
+  100% {
+    transform: rotate(-16.02deg);
   }
 }
