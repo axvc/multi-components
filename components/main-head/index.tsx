@@ -26,7 +26,13 @@ const MainHead: FC<Props> = ({ title, description }) => (
     <meta property="og:image:alt" content="Screenshot" />
     <meta property="og:title" content={title} />
     <meta property="og:site_name" content={title} />
-    <link rel="icon" href="/favicon.ico" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="icon" href="https://multicomponents.vercel.app/favicon.ico" />
+    <link
+      rel="preload"
+      as="image"
+      href="https://multicomponents.vercel.app/main-page.png"
+    />
   </Head>
 );
 
