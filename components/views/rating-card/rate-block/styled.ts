@@ -27,7 +27,7 @@ export const Title = styled.h2`
 
 export const Description = styled.p`
   font-size: 15px;
-  margin-top: -10px;
+  margin-top: 0;
   margin-bottom: 30px;
   color: ${Colors.LIGHT_GREY};
 `;

@@ -6,6 +6,7 @@ import { Tips } from 'constants/tip-calculator/Tips';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Placeholders } from 'constants/tip-calculator/Placeholders';
+import { Messages } from 'constants/tip-calculator/Messages';
 
 const tips = [Tips.FIVE, Tips.TEN, Tips.FIFTEEN, Tips.TWENTY_FIVE, Tips.FIFTY];
 
@@ -16,6 +17,7 @@ enum Fields {
 }
 
 const fieldsType = 'number';
+const moreThanRule = 0;
 
 interface Props {
   bill?: number | string;
@@ -34,29 +36,28 @@ const EnterBlock: FC<Props> = ({
   handleTip,
   handleNumberOfPerson,
 }) => {
-  const {
-    handleSubmit,
-    handleBlur,
-    values,
-    errors,
-    touched,
-    handleChange,
-    validateField,
-    isValid,
-  } = useFormik({
-    enableReinitialize: true,
-    initialValues: {
-      bill: '',
-      tip: '',
-      numberOfPerson: '',
-    },
-    validationSchema: Yup.object().shape({
-      bill: Yup.number().required().moreThan(0),
-      tip: Yup.number().required().moreThan(0),
-      numberOfPerson: Yup.number().required().moreThan(0),
-    }),
-    onSubmit: () => {},
-  });
+  const { handleBlur, values, errors, touched, handleChange, validateField } =
+    useFormik({
+      enableReinitialize: true,
+      initialValues: {
+        bill: bill || '',
+        tip: tip || '',
+        numberOfPerson: numberOfPerson || '',
+      },
+      validationSchema: Yup.object().shape({
+        bill: Yup.number()
+          .required(Messages.EMPTY)
+          .moreThan(moreThanRule, Messages.BILL_MORE_THAN_ZERO),
+        tip: Yup.number()
+          .required(Messages.NOT_SELECTED)
+          .moreThan(moreThanRule, Messages.TIP_MORE_THAN_ZERO),
+        numberOfPerson: Yup.number()
+          .required(Messages.EMPTY)
+          .moreThan(moreThanRule, Messages.NUMBER_OF_PERSON_MORE_THAN_ZERO)
+          .integer(Messages.NUMBER_OF_PERSON_INTEGER),
+      }),
+      onSubmit: () => {},
+    });
 
   const onBlur = (
     e: React.FocusEvent<HTMLInputElement>,
@@ -92,8 +93,14 @@ const EnterBlock: FC<Props> = ({
       <ST.TipBlock>
         <ST.Label>Select Tip</ST.Label>
         <ST.Tips>
-          {tips.map((tip) => (
-            <ST.Tip key={tip}>{tip}%</ST.Tip>
+          {tips.map((item) => (
+            <ST.Tip
+              key={item}
+              selected={tip === item}
+              onClick={() => handleTip(item)}
+            >
+              {item}%
+            </ST.Tip>
           ))}
           <ST.Field
             type={fieldsType}
@@ -101,7 +108,7 @@ const EnterBlock: FC<Props> = ({
             id={Fields.TIP}
             name={Fields.TIP}
             placeholder={Placeholders.TIP}
-            value={values.tip}
+            value={tips.includes(+values.tip) ? '' : values.tip}
             onChange={handleChange}
             onBlur={(e) => onBlur(e, Fields.TIP, handleTip)}
           />

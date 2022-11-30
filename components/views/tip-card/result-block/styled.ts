@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Colors } from 'constants/tip-calculator/Colors';
+import { Widths } from 'constants/tip-calculator/Widths';
 
 export const Container = styled.div`
   display: flex;
@@ -11,6 +12,12 @@ export const Container = styled.div`
   padding: 50px;
   font-size: 18px;
   justify-content: space-between;
+
+  @media (max-width: ${Widths.DESKTOP}) {
+    height: 50%;
+    padding: 30px;
+    width: auto;
+  }
 `;
 
 export const Price = styled.div`
@@ -40,6 +47,10 @@ export const PostLabel = styled.span`
 export const Value = styled.div`
   color: ${Colors.STRONG_CYAN};
   font-size: 48px;
+
+  @media (max-width: ${Widths.DESKTOP}) {
+    font-size: 32px;
+  }
 `;
 
 export const TotalBlock = styled.div`
@@ -60,5 +71,9 @@ export const Button = styled.button`
 
   :hover {
     background-color: ${Colors.LIGHT_GRAYISH_CYAN};
+  }
+
+  @media (max-width: ${Widths.DESKTOP}) {
+    margin-top: 40px;
   }
 `;

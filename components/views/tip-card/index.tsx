@@ -7,6 +7,11 @@ const TipCard: FC = () => {
   const [bill, setBill] = useState<number>(0);
   const [tip, setTip] = useState<number>(0);
   const [numberOfPerson, setNumberOfPerson] = useState<number>(0);
+  const reset = () => {
+    setBill(0);
+    setTip(0);
+    setNumberOfPerson(0);
+  };
   return (
     <ST.Container>
       <EnterBlock
@@ -17,7 +22,12 @@ const TipCard: FC = () => {
         handleTip={setTip}
         handleNumberOfPerson={setNumberOfPerson}
       />
-      <ResultBlock />
+      <ResultBlock
+        bill={bill}
+        tip={tip}
+        numberOfPerson={numberOfPerson}
+        handleReset={reset}
+      />
     </ST.Container>
   );
 };

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Colors } from 'constants/tip-calculator/Colors';
+import { Widths } from 'constants/tip-calculator/Widths';
 
 export const Container = styled.div`
   display: flex;
@@ -7,6 +8,11 @@ export const Container = styled.div`
   flex-grow: 1;
   width: 50%;
   font-size: 24px;
+
+  @media (max-width: ${Widths.DESKTOP}) {
+    height: 50%;
+    width: auto;
+  }
 `;
 
 export const Label = styled.label`
@@ -16,7 +22,7 @@ export const Label = styled.label`
 `;
 
 export const Field = styled.input<{ error: boolean }>`
-  padding: 0.25rem;
+  padding: 0.25rem 1rem 0.25rem 0.25rem;
   background-color: ${Colors.VERY_LIGHT_GRAYISH_CYAN};
   text-align: right;
   border-radius: 4px;
@@ -62,13 +68,19 @@ export const Tips = styled.div`
 
   input {
     width: 30%;
-    text-align: center;
-    padding-left: 3%;
+    text-align: right;
+    padding-right: 4%;
+
+    @media (max-width: ${Widths.DESKTOP}) {
+      font-size: 18px;
+    }
   }
 `;
 
-export const Tip = styled.div`
-  background-color: ${Colors.VERY_DARK_CYAN};
+export const Tip = styled.div<{ selected: boolean }>`
+  background-color: ${(props) =>
+    props.selected ? Colors.STRONG_CYAN : Colors.VERY_DARK_CYAN};
+  color: ${(props) => (props.selected ? Colors.VERY_DARK_CYAN : Colors.WHITE)};
   width: 30%;
   text-align: center;
   padding: 6px;

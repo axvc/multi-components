@@ -4,7 +4,6 @@ import { Widths } from 'constants/tip-calculator/Widths';
 
 export const Container = styled.div`
   position: relative;
-  width: 1000px;
   background-color: ${Colors.WHITE};
   font-family: 'Space Mono', monospace;
   border-radius: 40px;
@@ -14,6 +13,8 @@ export const Container = styled.div`
   gap: 40px;
 
   @media (max-width: ${Widths.DESKTOP}) {
+    flex-direction: column;
     width: 90%;
+    gap: 10px;
   }
 `;
