@@ -14,7 +14,10 @@ const MainHead: FC<Props> = ({ title, description }) => (
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://multicomponents.vercel.app/" />
     <meta property="og:image" content="https://ibb.co/qF3xs2z" />
-    <meta property="og:image:secure_url" content="https://ibb.co/qF3xs2z" />
+    <meta
+      property="og:image:secure_url"
+      content="https://multicomponents.vercel.app/main-page.png"
+    />
     <meta property="og:image:width" content="1920" />
     <meta property="og:image:height" content="1080" />
     <meta property="og:image:alt" content="Screenshot" />
