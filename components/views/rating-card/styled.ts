@@ -1,5 +1,11 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { Colors } from 'constants/rating/Colors';
+
+createGlobalStyle`
+  body {
+    background-color: hsl(216, 12%, 8%); 
+  }
+`;
 
 export const Container = styled.div<{ success: boolean }>`
   width: 400px;

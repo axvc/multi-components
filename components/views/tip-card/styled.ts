@@ -1,6 +1,12 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { Colors } from 'constants/tip-calculator/Colors';
 import { Widths } from 'constants/tip-calculator/Widths';
+
+createGlobalStyle`
+  body {
+    background-color: hsl(185, 41%, 84%); 
+  }
+`;
 
 export const Container = styled.div`
   position: relative;
