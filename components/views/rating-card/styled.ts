@@ -3,7 +3,17 @@ import { Colors } from 'constants/rating/Colors';
 
 createGlobalStyle`
   body {
-    background-color: hsl(216, 12%, 8%); 
+    background-color: ${Colors.VERY_DARK_BLUE};
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+    body {
+      color: white;
+      background: ${Colors.VERY_DARK_BLUE};
+    }
   }
 `;
 

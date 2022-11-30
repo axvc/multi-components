@@ -4,7 +4,17 @@ import { Widths } from 'constants/advice-generator/Widths';
 
 createGlobalStyle`
   body {
-    background-color: hsl(218, 23%, 16%); 
+    background-color: ${Colors.DARK_BLUE};
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+    body {
+      color: white;
+      background: ${Colors.DARK_BLUE};
+    }
   }
 `;
 

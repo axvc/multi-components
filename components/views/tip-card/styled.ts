@@ -4,7 +4,17 @@ import { Widths } from 'constants/tip-calculator/Widths';
 
 createGlobalStyle`
   body {
-    background-color: hsl(185, 41%, 84%); 
+    background-color: ${Colors.LIGHT_GRAYISH_CYAN};
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+    body {
+      color: white;
+      background: ${Colors.LIGHT_GRAYISH_CYAN};
+    }
   }
 `;
 
