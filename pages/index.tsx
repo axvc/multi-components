@@ -131,7 +131,7 @@ const Home: FC = () => {
             Frontend Mentor
           </a>
         </p>
-        <p className="mt-3">
+        <p className="mt-3 mb-3">
           Coded by <a href="https://github.com/axvc">@axvc</a>
         </p>
       </div>
